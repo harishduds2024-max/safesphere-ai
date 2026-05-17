@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<header>
+  <h1>SafeSphere AI Dashboard</h1>
+</header>
+
+<section class="dashboard">
+
+  <div class="stats">
+
+    <div class="box">
+      <h2 id="threats">12</h2>
+      <p>Total Threats</p>
+    </div>
+
+    <div class="box">
+      <h2 id="risk">4</h2>
+      <p>High Risk Alerts</p>
+    </div>
+
+    <div class="box">
+      <h2 id="users">108</h2>
+      <p>Protected Users</p>
+    </div>
+
+  </div>
+
+  <div class="alerts">
+
+    <h2>Recent Threat Reports</h2>
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Threat</th>
+        <th>Level</th>
+        <th>Status</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>Phishing Attack</td>
+        <td>High</td>
+        <td>Blocked</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Malware Attempt</td>
+        <td>Medium</td>
+        <td>Monitoring</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>Suspicious Login</td>
+        <td>Low</td>
+        <td>Resolved</td>
+      </tr>
+
+    </table>
+
+    <a href="contact.html" class="btn">
+      Contact Support
+    </a>
+
+  </div>
+
+</section>
+
+<script>
+
+setInterval(() => {
+  document.getElementById('threats').innerText = Math.floor(Math.random()*20);
+  document.getElementById('risk').innerText = Math.floor(Math.random()*10);
+},3000);
+
+</script>
+
+</body>
+</html>
