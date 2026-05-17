@@ -1,0 +1,71 @@
+body {
+  padding: 15px 30px;
+  margin-top: 20px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 50px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 40px;
+}
+
+.threat-section {
+  padding: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #334155;
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background: #1e293b;
+}
+
+.form-section {
+  padding: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+}
+
+input,
+select {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #0f172a;
+}
