@@ -1,30 +1,25 @@
 import sqlite3
 
-conn = sqlite3.connect('database/safesphere.db')
+conn = sqlite3.connect('safesphere.db')
 
 cursor = conn.cursor()
 
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS threats (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-    level TEXT NOT NULL,
-    status TEXT NOT NULL
+    title TEXT,
+    level TEXT,
+    status TEXT
 )
 ''')
 
-sample_data = [
-    ('Phishing Attack', 'High', 'Detected'),
-    ('Malware Risk', 'Medium', 'Monitoring'),
-    ('Suspicious Login', 'Low', 'Resolved')
-]
-
-cursor.executemany(
-    'INSERT INTO threats (title, level, status) VALUES (?, ?, ?)',
-    sample_data
-)
+cursor.execute('''
+INSERT INTO threats (title, level, status)
+VALUES
+('Phishing Attack', 'High', 'Detected')
+''')
 
 conn.commit()
 conn.close()
 
-print('Database initialized successfully')
+print("Database Created Successfully")
