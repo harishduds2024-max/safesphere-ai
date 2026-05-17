@@ -1,107 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>SafeSphere AI</title>
-
-  <style>
-
-    body{
-      margin:0;
-      font-family:Arial;
-      background:#020617;
-      color:white;
-      text-align:center;
-      padding:100px 20px;
+    .card h3{
+      margin-bottom:15px;
+      color:#60a5fa;
     }
 
-    h1{
-      font-size:60px;
-    }
-
-    p{
-      font-size:22px;
-      max-width:700px;
-      margin:auto;
-      line-height:1.6;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:40px;
-      padding:15px 35px;
-      background:#3b82f6;
-      color:white;
-      text-decoration:none;
-      border-radius:10px;
-      font-size:20px;
-    }
-
-    .cards{
-      margin-top:80px;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .card{
+    footer{
       background:#0f172a;
-      padding:25px;
-      border-radius:10px;
+      text-align:center;
+      padding:30px;
+      margin-top:50px;
     }
-
   </style>
-
 </head>
-
 <body>
 
-  <h1>SafeSphere AI</h1>
+<nav>
+  <h2>SafeSphere AI</h2>
 
-  <p>
-    AI-powered cybersecurity and personal safety assistant
-    that helps users detect threats and stay protected online.
-  </p>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <a class="btn"
-     href="https://github.com/harishduds2024-max/safesphere-ai"
-     target="_blank">
+<section class="hero">
 
-     View Project
+  <div class="hero-content">
 
-  </a>
+    <h1>SafeSphere AI</h1>
+
+    <p>
+      AI-powered cybersecurity and personal safety assistant
+      that helps users detect threats and stay protected online.
+    </p>
+
+    <a href="dashboard.html" class="btn">
+      View Project
+    </a>
+
+  </div>
+
+</section>
+
+<section class="features">
+
+  <h2>Core Features</h2>
 
   <div class="cards">
 
     <div class="card">
-      <h2>Threat Detection</h2>
-
-      <p>
-        Detect suspicious cyber activities using AI.
-      </p>
+      <h3>Threat Detection</h3>
+      <p>Detect suspicious cyber activities using AI analysis.</p>
     </div>
 
     <div class="card">
-      <h2>Data Protection</h2>
-
-      <p>
-        Secure sensitive information and improve digital safety.
-      </p>
+      <h3>Data Protection</h3>
+      <p>Protect sensitive information and improve digital safety.</p>
     </div>
 
     <div class="card">
-      <h2>AI Assistance</h2>
-
-      <p>
-        Get intelligent security recommendations instantly.
-      </p>
+      <h3>AI Assistant</h3>
+      <p>Get instant cybersecurity guidance and recommendations.</p>
     </div>
 
   </div>
 
-</body>
+</section>
 
+<footer>
+  <p>Built for Build with MeDo Hackathon 2026</p>
+</footer>
+
+</body>
 </html>
