@@ -162,6 +162,43 @@ color:#60a5fa;
 font-weight:600;
 }
 
+.alert-box{
+background:#0f172a;
+padding:30px;
+border-radius:20px;
+margin-top:40px;
+}
+
+.alert-box h2{
+margin-bottom:20px;
+color:#60a5fa;
+}
+
+.alert{
+padding:18px;
+border-radius:12px;
+background:#1e293b;
+font-size:18px;
+font-weight:500;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.02);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
 .activity{
 background:#0f172a;
 padding:30px;
@@ -266,6 +303,16 @@ Start AI Scan
 
 </div>
 
+<div class="alert-box">
+
+<h2>Live Security Alerts</h2>
+
+<div class="alert" id="alertText">
+🟢 System monitoring active...
+</div>
+
+</div>
+
 <div class="activity">
 
 <h2>Recent Activity</h2>
@@ -306,6 +353,37 @@ result.innerHTML =
 },3000);
 
 }
+
+const alerts = [
+
+"🟢 Firewall protection enabled",
+
+"🟡 Suspicious login detected",
+
+"🔵 AI scan running in background",
+
+"🟢 Threats blocked successfully",
+
+"🔴 Malware attempt prevented"
+
+];
+
+let index = 0;
+
+setInterval(() => {
+
+document.getElementById("alertText").innerHTML =
+alerts[index];
+
+index++;
+
+if(index >= alerts.length){
+
+index = 0;
+
+}
+
+},3000);
 
 </script>
 
