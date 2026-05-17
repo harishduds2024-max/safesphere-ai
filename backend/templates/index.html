@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<section class="stats-section">
+  <div class="card">
+    <h3>Total Threats</h3>
+    <p id="totalThreats">0</p>
+  </div>
+
+  <div class="card">
+    <h3>High Risk</h3>
+    <p id="highThreats">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Medium Risk</h3>
+    <p id="mediumThreats">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Low Risk</h3>
+    <p id="lowThreats">0</p>
+  </div>
+</section>
+
+<section class="threat-section">
+  <h2>Threat Dashboard</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Threat</th>
+        <th>Level</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody id="threatTableBody">
+    </tbody>
+  </table>
+</section>
+
+<section class="form-section">
+  <h2>Add New Threat</h2>
+
+  <form id="threatForm">
+    <input type="text" id="title" placeholder="Threat Title" required>
+
+    <select id="level">
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+
+    <input type="text" id="status" placeholder="Status" required>
+
+    <button type="submit">Add Threat</button>
+  </form>
+</section>
+
+<footer>
+  <p>Built for Build with MeDo Hackathon 2026</p>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
