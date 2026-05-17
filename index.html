@@ -1,44 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SafeSphere AI</title>
+
   <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
     body{
-      font-family:Arial;
-      background:#0f172a;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #020617, #0f172a);
       color:white;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
       text-align:center;
-      padding:100px;
+      padding:20px;
     }
+
+    .container{
+      max-width:800px;
+    }
+
     h1{
-      font-size:50px;
+      font-size:70px;
+      margin-bottom:20px;
+      color:#ffffff;
     }
+
     p{
-      font-size:20px;
-      max-width:700px;
-      margin:auto;
+      font-size:24px;
+      line-height:1.6;
+      color:#d1d5db;
+      margin-bottom:40px;
     }
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+    }
+
     button{
-      padding:15px 30px;
-      border:none;
-      border-radius:10px;
       background:#3b82f6;
       color:white;
-      font-size:18px;
-      margin-top:30px;
+      border:none;
+      padding:18px 40px;
+      font-size:20px;
+      border-radius:12px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#2563eb;
+      transform:scale(1.05);
+    }
+
+    .features{
+      margin-top:60px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      padding:25px;
+      border-radius:15px;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#60a5fa;
+    }
+
+    footer{
+      margin-top:50px;
+      color:#9ca3af;
+      font-size:14px;
     }
   </style>
 </head>
+
 <body>
 
-<h1>SafeSphere AI</h1>
+  <div class="container">
 
-<p>
-AI-powered cybersecurity and personal safety assistant
-that helps users detect threats and stay protected online.
-</p>
+    <h1>SafeSphere AI</h1>
 
-<button>Project Demo</button>
+    <p>
+      AI-powered cybersecurity and personal safety assistant
+      that helps users detect threats, secure sensitive data,
+      and stay protected online through intelligent automation.
+    </p>
+
+    <a class="btn" href="https://github.com/harishduds2024-max/safesphere-ai" target="_blank">
+      <button>View Project</button>
+    </a>
+
+    <div class="features">
+
+      <div class="card">
+        <h3>Threat Detection</h3>
+        <p>Detect suspicious online activities using AI analysis.</p>
+      </div>
+
+      <div class="card">
+        <h3>Data Protection</h3>
+        <p>Secure user information and improve digital safety.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Assistance</h3>
+        <p>Provide instant cybersecurity recommendations and alerts.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      Built for the Build with MeDo Hackathon 2026
+    </footer>
+
+  </div>
 
 </body>
 </html>
