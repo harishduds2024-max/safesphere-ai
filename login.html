@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SafeSphere Login</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>SafeSphere AI Login</title>
 
 <style>
 
@@ -16,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -24,42 +19,34 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:
-linear-gradient(rgba(2,6,23,0.9),rgba(2,6,23,0.95)),
-url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
+background:#020617;
 color:white;
 }
 
-.login-box{
-width:400px;
+.container{
+width:380px;
 background:#0f172a;
-padding:45px;
+padding:40px;
 border-radius:20px;
-box-shadow:0 0 30px rgba(37,99,235,0.4);
+box-shadow:0 0 20px rgba(37,99,235,0.4);
+text-align:center;
 }
 
-.login-box h1{
-text-align:center;
+h1{
 margin-bottom:10px;
-font-size:40px;
+font-size:38px;
 color:#60a5fa;
 }
 
-.login-box p{
-text-align:center;
-margin-bottom:35px;
+p{
+margin-bottom:30px;
 color:#cbd5e1;
 }
 
-.input-box{
-margin-bottom:20px;
-}
-
-.input-box input{
+input{
 width:100%;
 padding:15px;
+margin-bottom:20px;
 border:none;
 border-radius:10px;
 background:#1e293b;
@@ -75,21 +62,18 @@ border-radius:10px;
 background:#2563eb;
 color:white;
 font-size:18px;
-font-weight:600;
 cursor:pointer;
 transition:0.3s;
 }
 
 button:hover{
 background:#1d4ed8;
-transform:scale(1.02);
 }
 
-.bottom-text{
+.footer{
 margin-top:20px;
-text-align:center;
-color:#94a3b8;
 font-size:14px;
+color:#94a3b8;
 }
 
 </style>
@@ -98,33 +82,29 @@ font-size:14px;
 
 <body>
 
-<div class="login-box">
+<div class="container">
 
 <h1>SafeSphere AI</h1>
 
-<p>Secure Cybersecurity Access Portal</p>
+<p>Cybersecurity Access Portal</p>
 
-<div class="input-box">
 <input type="email" placeholder="Enter Email">
-</div>
 
-<div class="input-box">
 <input type="password" placeholder="Enter Password">
-</div>
 
-<button onclick="loginUser()">
-Secure Login
+<button onclick="goDashboard()">
+Login Securely
 </button>
 
-<div class="bottom-text">
-Protected by AI-powered security systems
+<div class="footer">
+Protected by AI Security System
 </div>
 
 </div>
 
 <script>
 
-function loginUser(){
+function goDashboard(){
 
 alert("Login Successful!");
 
@@ -135,5 +115,4 @@ window.location.href="dashboard.html";
 </script>
 
 </body>
-
 </html>
