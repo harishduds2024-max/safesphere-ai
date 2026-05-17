@@ -1,13 +1,220 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SafeSphere AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#020617;
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#0f172a;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#60a5fa;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+background:radial-gradient(circle at top,#1e3a8a,#020617 70%);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero-content h1{
+font-size:80px;
+margin-bottom:20px;
+}
+
+.hero-content span{
+color:#60a5fa;
+}
+
+.hero-content p{
+font-size:24px;
+line-height:1.8;
+color:#cbd5e1;
+}
+
+.btn-group{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.btn{
+padding:16px 35px;
+border-radius:12px;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+}
+
+.primary{
+background:#2563eb;
+color:white;
+}
+
+.secondary{
+border:2px solid #60a5fa;
+color:#60a5fa;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:80px 8%;
+}
+
+.stat-card{
+background:#0f172a;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat-card h2{
+font-size:40px;
+color:#60a5fa;
+margin-bottom:10px;
+}
+
+.features{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:48px;
+margin-bottom:60px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#0f172a;
+padding:35px;
+border-radius:20px;
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:15px;
+color:#60a5fa;
+}
+
+.card p{
+line-height:1.8;
+color:#cbd5e1;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#0f172a;
+color:#94a3b8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+SafeSphere AI
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Stay Secure.
+<span>Stay Ahead.</span>
+</h1>
+
+<p>
+SafeSphere AI is an intelligent cybersecurity platform designed to protect users from online threats and digital vulnerabilities.
+</p>
 
 <div class="btn-group">
-<a href="dashboard.html" class="btn primary">View Project</a>
-<a href="contact.html" class="btn secondary">Contact Team</a>
+
+<a href="dashboard.html" class="btn primary">
+View Project
+</a>
+
+<a href="contact.html" class="btn secondary">
+Contact Team
+</a>
+
 </div>
+
 </div>
+
 </section>
 
 <section class="stats">
+
 <div class="stat-card">
 <h2>98%</h2>
 <p>Threat Detection Accuracy</p>
@@ -27,31 +234,46 @@
 <h2>120+</h2>
 <p>Countries Protected</p>
 </div>
+
 </section>
 
 <section class="features">
-<h2 class="section-title">Premium Features</h2>
+
+<h2 class="section-title">
+Premium Features
+</h2>
 
 <div class="cards">
+
 <div class="card">
 <h3>AI Threat Detection</h3>
-<p>Advanced AI algorithms continuously monitor and detect suspicious cyber activities in real time.</p>
+<p>
+Advanced AI algorithms continuously monitor and detect suspicious cyber activities in real time.
+</p>
 </div>
 
 <div class="card">
 <h3>Real-Time Protection</h3>
-<p>Monitor active threats and receive instant protection alerts and automated recommendations.</p>
+<p>
+Monitor active threats and receive instant protection alerts and automated recommendations.
+</p>
 </div>
 
 <div class="card">
 <h3>Smart Analytics</h3>
-<p>Visualize cybersecurity reports and gain insights through intelligent dashboards.</p>
+<p>
+Visualize cybersecurity reports and gain insights through intelligent dashboards.
+</p>
 </div>
+
 </div>
+
 </section>
 
 <footer>
-<p>Built for Build with MeDo Hackathon 2026 | SafeSphere AI</p>
+<p>
+Built for Build with MeDo Hackathon 2026 | SafeSphere AI
+</p>
 </footer>
 
 </body>
