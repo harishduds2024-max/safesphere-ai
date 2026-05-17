@@ -31,10 +31,13 @@ justify-content:space-between;
 align-items:center;
 padding:20px 8%;
 background:#0f172a;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-font-size:30px;
+font-size:32px;
 font-weight:700;
 color:#60a5fa;
 }
@@ -48,6 +51,12 @@ list-style:none;
 nav a{
 text-decoration:none;
 color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
 }
 
 .hero{
@@ -57,7 +66,8 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:40px;
-background:radial-gradient(circle at top,#1e3a8a,#020617 70%);
+background:
+radial-gradient(circle at top,#1e3a8a,#020617 70%);
 }
 
 .hero-content{
@@ -65,8 +75,9 @@ max-width:900px;
 }
 
 .hero-content h1{
-font-size:80px;
+font-size:90px;
 margin-bottom:20px;
+line-height:1.1;
 }
 
 .hero-content span{
@@ -77,6 +88,7 @@ color:#60a5fa;
 font-size:24px;
 line-height:1.8;
 color:#cbd5e1;
+margin-top:20px;
 }
 
 .btn-group{
@@ -84,6 +96,7 @@ margin-top:40px;
 display:flex;
 justify-content:center;
 gap:20px;
+flex-wrap:wrap;
 }
 
 .btn{
@@ -92,6 +105,7 @@ border-radius:12px;
 text-decoration:none;
 font-size:18px;
 font-weight:600;
+transition:0.3s;
 }
 
 .primary{
@@ -99,9 +113,19 @@ background:#2563eb;
 color:white;
 }
 
+.primary:hover{
+background:#1d4ed8;
+transform:translateY(-3px);
+}
+
 .secondary{
 border:2px solid #60a5fa;
 color:#60a5fa;
+}
+
+.secondary:hover{
+background:#60a5fa;
+color:white;
 }
 
 .stats{
@@ -113,13 +137,19 @@ padding:80px 8%;
 
 .stat-card{
 background:#0f172a;
-padding:30px;
+padding:35px;
 border-radius:20px;
 text-align:center;
+transition:0.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(96,165,250,0.3);
 }
 
 .stat-card h2{
-font-size:40px;
+font-size:42px;
 color:#60a5fa;
 margin-bottom:10px;
 }
@@ -130,7 +160,7 @@ padding:100px 8%;
 
 .section-title{
 text-align:center;
-font-size:48px;
+font-size:50px;
 margin-bottom:60px;
 }
 
@@ -144,6 +174,12 @@ gap:30px;
 background:#0f172a;
 padding:35px;
 border-radius:20px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(96,165,250,0.3);
 }
 
 .card h3{
@@ -157,11 +193,72 @@ line-height:1.8;
 color:#cbd5e1;
 }
 
-footer{
-padding:30px;
-text-align:center;
+.team{
+padding:100px 8%;
+}
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.member{
 background:#0f172a;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:0.3s;
+}
+
+.member:hover{
+transform:translateY(-10px);
+}
+
+.member img{
+width:120px;
+height:120px;
+border-radius:50%;
+margin-bottom:20px;
+object-fit:cover;
+border:4px solid #60a5fa;
+}
+
+.member h3{
+margin-bottom:10px;
+}
+
+.member p{
 color:#94a3b8;
+}
+
+.footer{
+background:#0f172a;
+padding:40px;
+text-align:center;
+margin-top:80px;
+}
+
+.footer p{
+color:#94a3b8;
+line-height:1.8;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:55px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
 }
 
 </style>
@@ -194,13 +291,13 @@ Stay Secure.
 </h1>
 
 <p>
-SafeSphere AI is an intelligent cybersecurity platform designed to protect users from online threats and digital vulnerabilities.
+SafeSphere AI is an advanced cybersecurity platform powered by artificial intelligence to detect threats, protect user privacy, and deliver real-time digital security solutions.
 </p>
 
 <div class="btn-group">
 
 <a href="dashboard.html" class="btn primary">
-View Project
+Secure Login
 </a>
 
 <a href="contact.html" class="btn secondary">
@@ -248,21 +345,21 @@ Premium Features
 <div class="card">
 <h3>AI Threat Detection</h3>
 <p>
-Advanced AI algorithms continuously monitor and detect suspicious cyber activities in real time.
+Advanced machine learning algorithms continuously monitor suspicious activities and detect cyber threats instantly.
 </p>
 </div>
 
 <div class="card">
 <h3>Real-Time Protection</h3>
 <p>
-Monitor active threats and receive instant protection alerts and automated recommendations.
+Protect devices and sensitive information with intelligent real-time cybersecurity systems and monitoring tools.
 </p>
 </div>
 
 <div class="card">
 <h3>Smart Analytics</h3>
 <p>
-Visualize cybersecurity reports and gain insights through intelligent dashboards.
+Generate advanced analytics reports and visualize cybersecurity insights using intelligent AI dashboards.
 </p>
 </div>
 
@@ -270,11 +367,46 @@ Visualize cybersecurity reports and gain insights through intelligent dashboards
 
 </section>
 
-<footer>
+<section class="team">
+
+<h2 class="section-title">
+Security Team
+</h2>
+
+<div class="team-grid">
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>Alex Carter</h3>
+<p>AI Security Engineer</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h3>Sophia Lee</h3>
+<p>Cybersecurity Analyst</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/men/62.jpg">
+<h3>Daniel Smith</h3>
+<p>Cloud Protection Specialist</p>
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+
 <p>
-Built for Build with MeDo Hackathon 2026 | SafeSphere AI
+Built for Build with MeDo Hackathon 2026
+<br>
+SafeSphere AI © 2026
 </p>
-</footer>
+
+</div>
 
 </body>
+
 </html>
