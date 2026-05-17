@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      background:#3b82f6;
+      color:white;
+      border:none;
+      border-radius:10px;
+      font-size:18px;
+      cursor:pointer;
+    }
+
+    p{
+      text-align:center;
+      margin-top:20px;
+      color:#94a3b8;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Contact Support</h1>
+
+  <form onsubmit="showMessage(event)">
+
+    <input type="text" placeholder="Enter your name" required>
+
+    <input type="email" placeholder="Enter your email" required>
+
+    <textarea rows="5" placeholder="Enter your message"></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+
+  <p id="message"></p>
+
+</div>
+
+<script>
+
+function showMessage(event){
+  event.preventDefault();
+
+  document.getElementById('message').innerText =
+  'Message sent successfully!';
+}
+
+</script>
+
+</body>
+</html>
